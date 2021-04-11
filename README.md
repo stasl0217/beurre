@@ -20,7 +20,10 @@ To run the experiments, use:
 
 ## Reference
 Please refer to our paper. 
-Xuelu Chen*, Michael Boratko*, Muhao Chen, Shib Sankar Dasgupta, Xiang Lorraine Li, Andrew McCallum. Probabilistic Box Embeddings for Uncertain Knowledge Graph Reasoning. To appear in *the 19th Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)*, 2021, 2019
+
+Xuelu Chen*, Michael Boratko*, Muhao Chen, Shib Sankar Dasgupta, Xiang Lorraine Li, Andrew McCallum. Probabilistic Box Embeddings for Uncertain Knowledge Graph Reasoning. To appear in *the 19th Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)*, 2021
+
+* Indicating equal contribution
 
     @inproceedings{chen2021boxukg,
         title={Probabilistic Box Embeddings for Uncertain Knowledge Graph Reasoning},
