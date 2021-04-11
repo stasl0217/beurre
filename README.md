@@ -15,7 +15,10 @@ Install the dependents using:
 ## Run the experiments
 To run the experiments, use:
 
-    python ./main.py
+    python ./main.py --data cn15k --task mse
+    
+* You can switch to NL27k using `--data nl27k`
+* To train and test for the ranking task, use `--task ndcg`
 
 
 ## Reference
