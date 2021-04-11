@@ -1,4 +1,4 @@
-# beurre
+# BEUrRE
 Resources and code for paper "Probabilistic Box Embeddings for Uncertain Knowledge Graph Reasoning"
 
 ## Install
