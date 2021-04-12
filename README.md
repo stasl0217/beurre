@@ -16,11 +16,20 @@ Install the dependents using:
 
 ## Run the experiments
 To run the experiments, use:
+*[\* Code for will be released soon]*
 
     python ./main.py --data cn15k --task mse
     
 * You can switch to NL27k using `--data nl27k`
 * To train and test for the ranking task, use `--task ndcg`
+
+
+To test a trained model, you can use the following command:
+*[\* Temporary code has been uploaded for quick testing. Full code for will be released soon]*
+
+    python ./test-pretrained.py --data nl27k --task mse --model_path ./beurre-pretrained-models/nl27k-mse.pt
+
+The pre-trained models are available here [here](https://drive.google.com/file/d/1Ai_RJEdk4H9RHYpHOzl34ZWmJ9nrzOCR/view?usp=sharing).
 
 
 ## Reference
