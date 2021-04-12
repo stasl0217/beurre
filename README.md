@@ -29,7 +29,7 @@ To test a trained model, you can use the following command:
 
 *[\* Code has been uploaded for pretrained model testing. Full code will be released soon]*
 
-    python ./test-pretrained.py --data nl27k --task mse --model_path ./beurre-pretrained-models/nl27k-mse.pt
+    python ./test.py --data nl27k --task mse --model_path ./beurre-pretrained-models/nl27k-mse.pt
 
 The pre-trained models are available here [here](https://drive.google.com/file/d/1Ai_RJEdk4H9RHYpHOzl34ZWmJ9nrzOCR/view?usp=sharing).
 
