@@ -1,5 +1,7 @@
 # BEUrRE
-Resources and code for paper "Probabilistic Box Embeddings for Uncertain Knowledge Graph Reasoning"
+Resources and code* for paper "Probabilistic Box Embeddings for Uncertain Knowledge Graph Reasoning"
+
+\* Code will be released soon.
 
 ## Install
 Make sure your local environment has the following installed:
