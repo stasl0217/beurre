@@ -160,6 +160,7 @@ class BiGumbelBox(nn.Module):
 
 
     def inverse_rule_loss(self, batch_rel_ids):
+        # not really used. obsolete
         # find inverse relation pairs from this batch
         pairs = [[int(r1.detach()), self.inverse_dict[int(r1.detach())]] for r1 in batch_rel_ids if
                  int(r1.detach()) in self.inverse_dict]
