@@ -1,7 +1,6 @@
 # BEUrRE
 Resources and code* for paper "Probabilistic Box Embeddings for Uncertain Knowledge Graph Reasoning"
 
-\* Code will be released soon.
 
 ## Install
 Make sure your local environment has the following installed:
@@ -17,8 +16,6 @@ Install the dependents using:
 ## Run the experiments
 To run the experiments, use:
 
-*[Code will be released soon]*
-
     python ./main.py --data cn15k --task mse
     
 * You can switch to NL27k using `--data nl27k`
@@ -26,8 +23,6 @@ To run the experiments, use:
 
 
 To test a trained model, you can use the following command:
-
-*[Code for pretrained model testing has been temporarily uploaded. Full cleaned code will be released soon]*
 
     python ./test.py --data nl27k --task mse --model_path ./beurre-pretrained-models/nl27k-mse.pt
 
