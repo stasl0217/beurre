@@ -4,6 +4,7 @@ from collections import defaultdict
 import pickle
 from bigumbel import BiGumbelBox
 from os.path import join
+import torch
 
 random_seed = 1
 
