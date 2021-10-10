@@ -186,7 +186,6 @@ def run_train(
                     wandb.log({'epoch': last_best_epoch})
                     break  # early stop
 
-        # shirley
         # early stopping
         # stop if best_metric didn't improve in last 10 epochs
 

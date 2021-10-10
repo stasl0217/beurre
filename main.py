@@ -28,7 +28,7 @@ def main(args):
     train_dataset = UncertainTripleDataset(params.data_dir, 'train.tsv')
     train_test_dataset = UncertainTripleDataset(params.data_dir, 'train.tsv')  # obsolete, not used
     dev_dataset = UncertainTripleDataset(params.data_dir, 'val.tsv')
-    test_dataset = UncertainTripleDataset(params.data_dir, 'test_with_neg.tsv')
+    test_dataset = UncertainTripleDataset(params.data_dir, 'test.tsv')
 
 
     print(params.whichmodel)

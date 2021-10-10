@@ -191,7 +191,6 @@ def run_train(
                     wandb.log({'epoch': last_best_epoch})
                     break  # early stop
 
-        # shirley
         # early stopping
         # print('best', best_metric['valid_mse'], 'last best', last_best_metric['valid_mse'])
         if params.early_stop == 'valid_mse':

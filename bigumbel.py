@@ -5,7 +5,6 @@ from tensor_dataloader import *
 import torch.nn.functional as F
 from torch.distributions import uniform
 import copy
-from rule.inverse import get_inverse_relations
 import numpy as np
 
 class Box:
@@ -45,7 +44,6 @@ class BiGumbelBox(nn.Module):
         self.rel_trans_for_tail, self.rel_scale_for_tail = nn.Parameter(rel_trans_for_tail.to(device)), nn.Parameter(
             rel_scale_for_tail.to(device))
 
-        self.inverse_dict = get_inverse_relations(params)
         self.true_head, self.true_tail = None, None  # for negative sample filtering
         self.gumbel_beta = params.GUMBEL_BETA
         self.params = params
@@ -157,28 +155,6 @@ class BiGumbelBox(nn.Module):
         distribution = uniform.Uniform(init_value[0], init_value[1])
         box_embed = distribution.sample((vocab_size, embed_dim))
         return box_embed
-
-
-    def inverse_rule_loss(self, batch_rel_ids):
-        # not really used. obsolete
-        # find inverse relation pairs from this batch
-        pairs = [[int(r1.detach()), self.inverse_dict[int(r1.detach())]] for r1 in batch_rel_ids if
-                 int(r1.detach()) in self.inverse_dict]
-        pairs = torch.Tensor(pairs).type(torch.LongTensor).to(self.device)
-
-        left = pairs[:, 0]
-        right = pairs[:, 1]
-        left_trans_head = self.rel_trans_for_head[left]
-        left_trans_tail = self.rel_trans_for_tail[left]
-        right_trans_head = self.rel_trans_for_head[right]
-        right_trans_tail = self.rel_trans_for_tail[right]
-
-        diff = torch.sum(
-            torch.norm(left_trans_head + left_trans_tail, dim=1) + torch.norm(right_trans_head + right_trans_tail,
-                                                                               dim=1)) / self.params.BATCH_SIZE
-
-        return diff
-
 
     def random_negative_sampling(self, positive_samples, pos_probs, neg_per_pos=None):
         if neg_per_pos is None:
